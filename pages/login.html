@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<style type="text/css">.error {color: red;}</style>
+
+<h1>Login</h1>
+<form action="/" method="post">
+
+    <div>
+        {{ with .Email }}
+        <p class="error">{{ . }}</p>
+        {{ end }}
+        {{ with .Password }}
+        <p class="error">{{ . }}</p>
+        {{ end }}
+    </div>
+    <div>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required value="{{ .Email }}">
+    </div>
+
+    <div>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required value="{{ .Password }}">
+
+    </div>
+
+    <div>
+        <input type="submit" value="Login">
+    </div>
+
+
+</form>
+</body>
+</html>
