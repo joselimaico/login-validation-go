@@ -11,7 +11,7 @@ import (
 
 const (
 	username = "user@example.com"
-	password = "Zapote1234567!" // hashed password
+	password = "Zapote1234567!"
 )
 
 type Message struct {
